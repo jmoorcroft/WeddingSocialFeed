@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Sacramento&display=swap');
+
+:root {
+ --cursive: 'Sacramento', cursive;
+ --font-main: 'Roboto', sans-serif;
+ --bg:  rgb(25, 25, 25);
+}
+
+body{ 
+    margin: 0;
+    padding: 0;
+    color: bisque;
+    font-size: 8rem;
+    text-align: center;
+    font-family: var(--font-main);
+    background-color: var(--bg);
+}
+
+.container { 
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 4fr 1fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+/*************** Divisisions ***************/
+.photo-bin {
+    background-color: red;
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-flow: column;
+}
+
+.footer {
+    grid-column: 1/3;
+    text-align: center;
+}
+
+.sidebar {
+    grid-column: 2/3;
+    text-align: center;
+}
+
+/*************** Photo ***************/
+.photo-bin img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    position: flex;
+    z-index: 0;
+}
+
+
+
+/*************** Footer text ***************/
+.congrats {
+    font-family: var(--cursive);
+}
+
+.congrats::after {
+    content: ", ";
+}
+
+.hashtag {
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    margin: 0 0 1rem;
+}
+
+.hashtag::before {
+    content: url(images/instagram-brands.svg);
+    background-color: bisque;
+}
+
+
+/*************** Side Bar text ***************/
+.username {
+    background-color: rgb(25, 25, 25, .5);
+    color: burlywood;
+    font-size: 1.5rem;
+}
+
+.caption {
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 2rem .5rem;
+}
